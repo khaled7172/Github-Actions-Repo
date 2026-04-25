@@ -1,0 +1,14 @@
+name: Manual Hello Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Enter your username
+        required: true
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, ${{ github.actor }}!"

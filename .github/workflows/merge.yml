@@ -1,0 +1,12 @@
+name: Automatic Main Merge Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Changes merged to main"
